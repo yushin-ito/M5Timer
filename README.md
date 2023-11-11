@@ -18,7 +18,7 @@ An M5Stack library for displaying a timer.
 
 <h2>🚀 Features</h2>
 <ul>
-  <li>Display a timer<li>
+  <li>Display a timer</li>
   <li>Customize size and color</li>
 </ul>
 <br>
