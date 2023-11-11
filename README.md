@@ -2,7 +2,6 @@
 
 <div align="left">
   <img src="https://img.shields.io/badge/version-0.0.1-red.svg">
-  <a href="https://registry.platformio.org/libraries/yushin-ito/M5Timer"><img src="https://badges.registry.platformio.org/packages/yushin-ito/library/M5Timer.svg" alt="PlatformIO Registry" /></a>
   <img src="https://img.shields.io/github/actions/workflow/status/yushin-ito/M5Timer/build.yml">
   <img src="https://img.shields.io/github/stars/yushin-ito/M5Timer?color=yellow">
   <img src="https://img.shields.io/github/commit-activity/t/yushin-ito/M5Timer">
