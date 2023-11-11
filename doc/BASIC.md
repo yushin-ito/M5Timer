@@ -25,14 +25,14 @@
 
 Include the `M5Timer.h` and `M5Unified`
 
-```c
+```c++
 #include <M5Unified.h>
 #include <M5Timer.h>
 ```
 
 Then Instanciate
 
-```c
+```c++
 M5Timer tm;
 ```
 

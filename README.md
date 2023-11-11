@@ -38,13 +38,13 @@ An M5Stack library for displaying a timer.
 <ol>
   <li>Initialize your Platform IO project</li>
 
-```
+```powershell
 platformio init -d . -b m5stack-core-esp32
 ```
 
   <li>Install the library and its dependency</li>
 
-```
+```powershell
 platformio lib install M5Timer
 platformio lib install M5Unified
 ```
@@ -58,7 +58,7 @@ platformio lib install M5Unified
 
 <br>
 
-```c
+```c++
 #include <M5Unified.h>
 #include <M5Timer.h>
 
