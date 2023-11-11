@@ -117,7 +117,6 @@ void M5Timer::start() {
 
 void M5Timer::stop() {
     timerAlarmDisable(timer);
-    _drawing = false;
 }
 
 void M5Timer::reset() {
