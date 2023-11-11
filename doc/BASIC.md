@@ -9,9 +9,12 @@
     - [tm.setTextColor(color) => void](#tmsettextcolorcolor--void)
     - [tm.setBgColor(color) => void](#tmsetbgcolorcolor--void)
     - [tm.init() => void](#tminit--void)
+    - [tm.show() => void](#tmshow--void)
+    - [tm.hide() => void](#tmhide--void)
     - [tm.start() => void](#tmstart--void)
     - [tm.stop() => void](#tmstop--void)
     - [tm.reset() => void](#tmreset--void)
+    - [tm.isEnabled() => bool](#tmisenabled--bool)
     - [tm.isDrawing() => bool](#tmisdrawing--bool)
     - [tm.isChanged() => bool](#tmischanged--bool)
     - [tm.drawTimer() => void](#tmdrawtimer--void)
@@ -91,6 +94,18 @@ Initialize timer with position.
 
 Kind: instance method of `M5Timer`
 
+### tm.show() => void
+
+Show timer.
+
+Kind: instance method of `M5Timer`
+
+### tm.hide() => void
+
+Hide timer.
+
+Kind: instance method of `M5Timer`
+
 ### tm.start() => void
 
 Start timer.
@@ -106,6 +121,12 @@ Kind: instance method of `M5Timer`
 ### tm.reset() => void
 
 Reset timer.
+
+Kind: instance method of `M5Timer`
+
+### tm.isEnabled() => bool
+
+Get if the timer is enabled.
 
 Kind: instance method of `M5Timer`
 

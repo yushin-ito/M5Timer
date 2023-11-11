@@ -3,6 +3,7 @@
 class M5Timer {
 private:
   M5Canvas* canvas;
+  bool _enabled;
   bool _drawing;
   bool _changed;
   int32_t _x;
@@ -18,9 +19,12 @@ public:
   void setTextColor(uint32_t color);
   void setBgColor(uint32_t color);
   void init(int32_t x, int32_t y);
+  void show();
+  void hide();
   void start();
   void stop();
   void reset();
+  bool isEnabled();
   bool isDrawing();
   bool isChanged();
   void setChanged(bool changed);

@@ -52,6 +52,7 @@ void drawLoop(void* args) {
 
 M5Timer::M5Timer() {
     canvas = new M5Canvas(&M5.Lcd);
+    _enabled = false;
     _drawing = false;
     _changed = false;
     _x = 0;
@@ -89,6 +90,8 @@ void M5Timer::init(int32_t x, int32_t y) {
     timer = timerBegin(0, getApbFrequency() / 1000000, true);
     timerAttachInterrupt(timer, &onTimer, true);
     timerAlarmWrite(timer, 1000000, true);
+
+    show();
 }
 
 void M5Timer::show() {
@@ -112,10 +115,14 @@ void M5Timer::hide() {
 }
 
 void M5Timer::start() {
+    if (_enabled) return;
+    _enabled = true;
+
     timerAlarmEnable(timer);
 }
 
 void M5Timer::stop() {
+    _enabled = false;
     timerAlarmDisable(timer);
 }
 
@@ -126,6 +133,9 @@ void M5Timer::reset() {
     timer_info.day = 0;
 }
 
+bool M5Timer::isEnabled() {
+    return _enabled;
+}
 
 bool M5Timer::isDrawing() {
     return _drawing;
