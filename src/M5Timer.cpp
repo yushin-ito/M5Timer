@@ -91,7 +91,7 @@ void M5Timer::init(int32_t x, int32_t y) {
     timerAlarmWrite(timer, 1000000, true);
 }
 
-void M5Timer::start() {
+void M5Timer::show() {
     Context* ctx = new Context(this);
 
     if (_drawing) return;
@@ -104,7 +104,14 @@ void M5Timer::start() {
         1,
         &drawTaskHandle,
         APP_CPU_NUM);
+}
 
+void M5Timer::hide() {
+    _drawing = false;
+    _changed = true;
+}
+
+void M5Timer::start() {
     timerAlarmEnable(timer);
 }
 
