@@ -57,7 +57,7 @@ M5Timer::M5Timer() {
     _x = 0;
     _y = 0;
     _text_size = 1.0;
-    _color = canvas->color888(255, 255, 255);
+    _text_color = canvas->color888(255, 255, 255);
     _bg_color = canvas->color888(0, 0, 0);
 }
 
@@ -67,18 +67,18 @@ void M5Timer::setPosition(int32_t x, int32_t y) {
     _changed = true;
 }
 
-void M5Timer::setTextSize(float text_size) {
-    _text_size = text_size;
+void M5Timer::setTextSize(float size) {
+    _text_size = size;
     _changed = true;
 }
 
-void M5Timer::setColor(uint16_t color) {
-    _color = color;
+void M5Timer::setTextColor(uint32_t color) {
+    _text_color = color;
     _changed = true;
 }
 
-void M5Timer::setBgColor(uint16_t bg_color) {
-    _bg_color = bg_color;
+void M5Timer::setBgColor(uint32_t color) {
+    _bg_color = color;
     _changed = true;
 }
 
@@ -89,8 +89,6 @@ void M5Timer::init(int32_t x, int32_t y) {
     timer = timerBegin(0, getApbFrequency() / 1000000, true);
     timerAttachInterrupt(timer, &onTimer, true);
     timerAlarmWrite(timer, 1000000, true);
-
-    start();
 }
 
 void M5Timer::start() {
@@ -143,7 +141,7 @@ void M5Timer::drawTimer() {
 
     canvas->setTextWrap(false);
     canvas->setCursor(0, 0);
-    canvas->setTextColor(_color);
+    canvas->setTextColor(_text_color);
 
     canvas->setFont(&Font7);
     canvas->setTextSize(_text_size);

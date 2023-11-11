@@ -8,15 +8,15 @@ private:
   int32_t _x;
   int32_t _y;
   float _text_size;
-  uint32_t _color;
+  uint32_t _text_color;
   uint32_t _bg_color;
 
 public:
   M5Timer();
   void setPosition(int32_t x, int32_t y);
-  void setTextSize(float text_size);
-  void setColor(uint16_t color);
-  void setBgColor(uint16_t bg_color);
+  void setTextSize(float size);
+  void setTextColor(uint32_t color);
+  void setBgColor(uint32_t color);
   void init(int32_t x, int32_t y);
   void start();
   void stop();

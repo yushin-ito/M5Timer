@@ -23,7 +23,7 @@ An M5Stack library for displaying a timer.
 </ul>
 <br>
 <div align="center">
-  <img src="https://github.com/yushin-ito/M5Timer/assets/75526539/7a1514ee-3172-422f-889b-651a5821e1dd" width="80%"/>
+  <img src="https://github.com/yushin-ito/M5Timer/assets/75526539/26cb10b4-8c47-4716-8f28-013da7c379f8" width="80%"/>
 </div>
 
 <br>
@@ -53,17 +53,34 @@ An M5Stack library for displaying a timer.
 #include <M5Unified.h>
 #include <M5Timer.h>
 
-M5Timer ts;
+M5Timer tm;
 
 void setup() {
     auto cfg = M5.config();
     M5.begin(cfg);
-    ts.setCusor(0, M5.Display.height() / 2, 1);
-    ts.setText("Hello World!");
+
+    M5.Display.setRotation(1);
+    tm.init(0, 0);
 }
 
 void loop() {
-    ts.showTextScroll();
+    M5.update();
+
+    if (M5.BtnA.wasPressed()) {
+        if (tm.isDrawing()) {
+            tm.stop();
+        }
+        else {
+            tm.start();
+        }
+    }
+
+
+    if (M5.BtnB.wasPressed()) {
+        tm.reset();
+    }
+
+    delay(100);
 }
 ```
 
