@@ -8,7 +8,7 @@
     - [tm.setTextSize(size) => void](#tmsettextsizesize--void)
     - [tm.setTextColor(color) => void](#tmsettextcolorcolor--void)
     - [tm.setBgColor(color) => void](#tmsetbgcolorcolor--void)
-    - [tm.init() => void](#tminit--void)
+    - [tm.init(x, y) => void](#tminitx-y--void)
     - [tm.show() => void](#tmshow--void)
     - [tm.hide() => void](#tmhide--void)
     - [tm.start() => void](#tmstart--void)
@@ -83,7 +83,7 @@ Kind: instance method of `M5Timer`
 | :---: | :------: |
 | color | uint32_t |
 
-### tm.init() => void
+### tm.init(x, y) => void
 
 Initialize timer with position.
 
