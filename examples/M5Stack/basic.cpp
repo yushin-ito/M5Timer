@@ -6,7 +6,7 @@ M5Timer tm;
 void setup() {
     auto cfg = M5.config();
     M5.begin(cfg);
-
+    
     tm.init(0, 0);
 }
 
@@ -14,7 +14,7 @@ void loop() {
     M5.update();
 
     if (M5.BtnA.wasPressed()) {
-        if (tm.isDrawing()) {
+        if (tm.isEnabled()) {
             tm.stop();
         }
         else {

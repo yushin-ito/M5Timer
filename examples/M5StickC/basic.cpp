@@ -15,7 +15,7 @@ void loop() {
     M5.update();
 
     if (M5.BtnA.wasPressed()) {
-        if (tm.isDrawing()) {
+        if (tm.isEnabled()) {
             tm.stop();
         }
         else {

@@ -23,7 +23,7 @@ An M5Stack library for displaying a timer.
 </ul>
 <br>
 <div align="center">
-  <img src="https://github.com/yushin-ito/M5Timer/assets/75526539/26cb10b4-8c47-4716-8f28-013da7c379f8" width="80%"/>
+  <img src="https://github.com/yushin-ito/M5Timer/assets/75526539/af9c9dd2-d18f-4dc4-bb14-b26484bb3f80" width="80%"/>
 </div>
 
 <br>
