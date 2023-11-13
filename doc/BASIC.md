@@ -87,12 +87,12 @@ Kind: instance method of `M5Timer`
 
 Initialize timer with position.
 
+Kind: instance method of `M5Timer`
+
 | Param |  Type   |
 | :---: | :-----: |
 |   x   | int32_t |
 |   y   | int32_t |
-
-Kind: instance method of `M5Timer`
 
 ### tm.show() => void
 
