@@ -1,6 +1,6 @@
 #include "M5Timer.h"
 
-struct  timer_info_t {
+struct timer_info_t {
     uint8_t sec;
     uint8_t min;
     uint8_t hour;
@@ -147,6 +147,12 @@ bool M5Timer::isChanged() {
 
 void M5Timer::setChanged(bool changed) {
     _changed = changed;
+}
+
+String M5Timer::getTimeStamp() {
+    char timestamp[126];
+    sprintf(timestamp, "%02d:%02d:%02d", timer_info.hour, timer_info.min, timer_info.sec);
+    return String(timestamp);
 }
 
 void M5Timer::drawTimer() {

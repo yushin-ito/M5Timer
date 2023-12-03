@@ -17,6 +17,7 @@
     - [tm.isEnabled() => bool](#tmisenabled--bool)
     - [tm.isDrawing() => bool](#tmisdrawing--bool)
     - [tm.isChanged() => bool](#tmischanged--bool)
+    - [tm.getTimeStamp() => String](#tmgettimestamp--string)
     - [tm.drawTimer() => void](#tmdrawtimer--void)
 
 ## Instance Basics
@@ -139,6 +140,12 @@ Kind: instance method of `M5Timer`
 ### tm.isChanged() => bool
 
 Get if the timer style is changed.
+
+Kind: instance method of `M5Timer`
+
+### tm.getTimeStamp() => String
+
+Get timer info by timestamp.
 
 Kind: instance method of `M5Timer`
 

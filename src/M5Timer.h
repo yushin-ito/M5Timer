@@ -28,6 +28,7 @@ public:
   bool isDrawing();
   bool isChanged();
   void setChanged(bool changed);
+  String getTimeStamp();
   void drawTimer();
 };
 
