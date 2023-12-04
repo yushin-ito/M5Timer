@@ -1,3 +1,5 @@
+#ifndef _M5TIMER_H
+#define _M5TIMER_H
 #include <M5Unified.h>
 
 class M5Timer {
@@ -32,6 +34,10 @@ public:
   void drawTimer();
 };
 
+#endif // _M5TIMER_H
+
+#ifndef CONTEXT_H
+#define CONTEXT_H
 
 class Context {
 private:
@@ -41,3 +47,5 @@ public:
   Context(M5Timer* tm);
   M5Timer* getTimer();
 };
+
+#endif // CONTEXT_H

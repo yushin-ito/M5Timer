@@ -7,17 +7,17 @@ struct timer_info_t {
     uint8_t day;
 };
 
-timer_info_t timer_info = { 0, 0, 0 };
+static timer_info_t timer_info = { 0, 0, 0 };
 
-hw_timer_t* timer = NULL;
+static hw_timer_t* timer = NULL;
 
-TaskHandle_t drawTaskHandle;
+static TaskHandle_t drawTaskHandle;
 
 Context::Context(M5Timer* tm) { _tm = tm; }
 
 M5Timer* Context::getTimer() { return _tm; }
 
-void IRAM_ATTR onTimer() {
+static void IRAM_ATTR onTimer() {
     timer_info.sec++;
     if (timer_info.sec == 60) {
         timer_info.sec = 0;
@@ -33,7 +33,7 @@ void IRAM_ATTR onTimer() {
     }
 }
 
-void drawLoop(void* args) {
+static void drawLoop(void* args) {
     Context* ctx = reinterpret_cast<Context*>(args);
     M5Timer* tm = ctx->getTimer();
 
